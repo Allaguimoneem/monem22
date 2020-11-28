@@ -1,0 +1,15 @@
+<div class="container">
+  <form #f="ngForm">
+    <div class="form-group">
+      <label>login</label>
+      <input type="text" name="login" required  ngModel #l="ngModel">
+    </div>
+    <div class="alert alert-danger" *ngIf="l.invalid"> thabat ya waldi</div>
+    <div class="form-group">
+      <label>mot de passe</label>
+      <input type="text" name="mot" >
+    </div>
+    <button class="btn-dark" [disabled]="f.invalid">send</button>
+  </form>
+
+</div>
